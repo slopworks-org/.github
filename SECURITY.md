@@ -1,6 +1,6 @@
 # Security Policy
 
-This policy applies to every [The Fisher Slopworks Co](https://github.com/The-Fisher-Slopworks-Co)
+This policy applies to every [Slopworks Co.](https://github.com/slopworks-org)
 repository that does not ship its own `SECURITY.md`.
 
 ## Supported versions

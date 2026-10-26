@@ -1,7 +1,7 @@
 # Contributing
 
 These are the default contribution guidelines for
-[The Fisher Slopworks Co](https://github.com/The-Fisher-Slopworks-Co)
+[Slopworks Co.](https://github.com/slopworks-org)
 repositories. Individual projects may ship their own `CONTRIBUTING.md` with
 stack-specific setup and test commands — when they do, that file takes
 precedence over this one.
@@ -25,7 +25,7 @@ JSON, binaries, and docs that can't hold a comment). The inline header is two
 lines, using the file language's comment syntax:
 
 ```text
-SPDX-FileCopyrightText: 2026 The Fisher Slopworks Co
+SPDX-FileCopyrightText: 2026 Slopworks Co.
 SPDX-License-Identifier: AGPL-3.0-or-later
 ```
 
@@ -49,5 +49,5 @@ participating you are expected to uphold it.
 ## Starting a new project
 
 New repositories should be created from the
-[`template`](https://github.com/The-Fisher-Slopworks-Co/template) repository,
+[`template`](https://github.com/slopworks-org/template) repository,
 which ships this licensing and governance baseline ready to go.

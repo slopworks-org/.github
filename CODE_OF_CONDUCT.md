@@ -54,6 +54,6 @@ themselves face action decided by the rest of the maintainer team.
 
 ## License
 
-This Code of Conduct is an original work of The Fisher Slopworks Co, licensed
+This Code of Conduct is an original work of Slopworks Co., licensed
 under AGPL-3.0-or-later like the rest of this project. You are welcome to adapt
 it for your own projects.

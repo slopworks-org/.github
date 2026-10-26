@@ -1,9 +1,9 @@
 <!--
-SPDX-FileCopyrightText: 2026 The Fisher Slopworks Co
+SPDX-FileCopyrightText: 2026 Slopworks Co.
 SPDX-License-Identifier: AGPL-3.0-or-later
 -->
 
-# The Fisher Slopworks Co
+# Slopworks Co.
 
 Small, focused tools and experiments.
 
@@ -13,4 +13,4 @@ Our repositories are **free software**, licensed under
 security policy, and contribution guidelines.
 
 Every project follows our
-[engineering standard](https://github.com/The-Fisher-Slopworks-Co/.github/blob/main/STANDARD.md).
+[engineering standard](https://github.com/slopworks-org/.github/blob/main/STANDARD.md).

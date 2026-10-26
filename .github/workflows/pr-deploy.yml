@@ -1,4 +1,4 @@
-# SPDX-FileCopyrightText: 2026 The Fisher Slopworks Co
+# SPDX-FileCopyrightText: 2026 Slopworks Co.
 #
 # SPDX-License-Identifier: AGPL-3.0-or-later
 
@@ -22,7 +22,7 @@
 #     pull-requests: write
 #   jobs:
 #     pr-deploy:
-#       uses: The-Fisher-Slopworks-Co/.github/.github/workflows/pr-deploy.yml@main
+#       uses: slopworks-org/.github/.github/workflows/pr-deploy.yml@main
 name: PR deploy
 
 on:
