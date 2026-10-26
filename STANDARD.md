@@ -14,10 +14,10 @@ Archived repos are out of scope.
 | A4 | PR title check, with the repo's scopes | `.github/workflows/pr-title.yml` |
 | A5 | PR size labels | `.github/workflows/pr-size.yml` |
 | A6 | One check command, run by CI on PRs to main and by the pre-commit hook. Per-stack setup in [`stacks/`](stacks) | `.github/workflows/ci.yml` |
-| A7 | Dependabot, [snippet below](#4-dependabot) | `.github/dependabot.yml` |
+| A7 | Dependabot, copied from [`templates/dependabot.yml`](templates/dependabot.yml) | `.github/dependabot.yml` |
 | A8 | Code owner: `* @txssu` | `.github/CODEOWNERS` |
 | A9 | Third-party actions pinned by SHA with a `# vX.Y.Z` comment (`actions/*`, `github/*` and official setup actions are exempt) | all workflows |
-| A10 | Merge settings and ruleset, [see below](#5-merge-settings) | GitHub settings |
+| A10 | Merge settings and ruleset, [see below](#4-merge-settings) | GitHub settings |
 | A11 | Everything in English, except translations | whole repo |
 
 A4 and A5 call this repo's reusable workflows: copy the snippet from the top
@@ -58,41 +58,7 @@ Paste into `CLAUDE.md`, replacing `bun run check` with the repo's gate.
 - **Never merge locally.** Merging happens on GitHub, squash only.
 ```
 
-## 4. Dependabot
-
-Security updates for packages, weekly updates for actions after a 7-day
-cooldown. Swap `bun` for the repo's ecosystem, or drop that block.
-
-```yaml
-version: 2
-
-updates:
-  - package-ecosystem: bun
-    directory: /
-    schedule:
-      interval: weekly
-    open-pull-requests-limit: 0
-    commit-message:
-      prefix: chore(deps)
-    groups:
-      security:
-        applies-to: security-updates
-        patterns: ["*"]
-
-  - package-ecosystem: github-actions
-    directory: /
-    schedule:
-      interval: weekly
-    cooldown:
-      default-days: 7
-    commit-message:
-      prefix: chore(deps)
-    groups:
-      actions:
-        update-types: [minor, patch]
-```
-
-## 5. Merge settings
+## 4. Merge settings
 
 Run once per repo, and again when its check names change:
 

@@ -7,6 +7,7 @@ in this repo, at a glance:
 |---|---|
 | [`STANDARD.md`](STANDARD.md) | What every repo must have. Start here |
 | [`stacks/`](stacks) | Extra rules per stack |
+| [`templates/`](templates) | Files a repo copies as is |
 | [`.github/workflows/`](.github/workflows) | CI jobs that every repo calls instead of copying (table below) |
 | [`.github/pull_request_template.md`](.github/pull_request_template.md) | Default PR description, used by repos without their own |
 | [`.github/ISSUE_TEMPLATE/`](.github/ISSUE_TEMPLATE) | Default bug and feature forms, same rule |
