@@ -1,13 +1,9 @@
 #!/usr/bin/env bash
-# SPDX-FileCopyrightText: 2026 Slopworks
-#
-# SPDX-License-Identifier: AGPL-3.0-or-later
-
 # Apply the org's pull request settings to one repository, idempotently.
 #
 #   scripts/repo-settings.sh <repo> [required check name]...
 #
-#   scripts/repo-settings.sh any_talker "check / Type check & tests" "REUSE compliance"
+#   scripts/repo-settings.sh any_talker "check / Type check & tests"
 #
 # What it sets (see STANDARD.md → Pull request settings):
 #   - merge: squash only, commit title = PR title, body = PR body,
@@ -26,7 +22,7 @@ ORG=slopworks-org
 GITHUB_ACTIONS_APP_ID=15368
 
 if [[ $# -lt 1 ]]; then
-  sed -n '6,22p' "$0" | sed 's/^# \{0,1\}//'
+  sed -n '2,18p' "$0" | sed 's/^# \{0,1\}//'
   exit 64
 fi
 

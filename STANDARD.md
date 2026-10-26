@@ -1,12 +1,7 @@
-<!--
-SPDX-FileCopyrightText: 2026 Slopworks
-SPDX-License-Identifier: AGPL-3.0-or-later
--->
-
 # Engineering standard
 
 What every active Slopworks repository carries beyond licensing.
-Licensing and REUSE are in [COMPLIANCE.md](COMPLIANCE.md). The reference
+Licensing is in [COMPLIANCE.md](COMPLIANCE.md). The reference
 implementation is [`any_talker`](https://github.com/slopworks-org/any_talker):
 when this page and any_talker disagree, any_talker is the newer one and this page
 should be updated.
@@ -22,7 +17,7 @@ Archived repositories are out of scope.
 
 | # | What | Where | Notes |
 |---|---|---|---|
-| A1 | Licensing and REUSE | see [COMPLIANCE.md](COMPLIANCE.md) | REUSE CI calls the reusable `reuse.yml`. Forks of outside projects keep the upstream license (no AGPL) but still use REUSE, annotated with the upstream license and copyright holders, e.g. `cli`: MIT, gotd contributors (see [COMPLIANCE.md → Forks](COMPLIANCE.md#forks-of-outside-projects)) |
+| A1 | Licensing | `LICENSE` (root), see [COMPLIANCE.md](COMPLIANCE.md) | only the root `LICENSE` file: no `LICENSES/`, `REUSE.toml` or per-file SPDX headers. Forks of outside projects keep the upstream license (no AGPL), e.g. `cli`: MIT (see [COMPLIANCE.md → Forks](COMPLIANCE.md#forks-of-outside-projects)) |
 | A2 | `CLAUDE.md` + `AGENTS.md` | repo root | `AGENTS.md` is a symlink to `CLAUDE.md`. Covers commands, layout, conventions and the Definition of done below |
 | A3 | Definition of done | `CLAUDE.md` | copy the section below, adjusting the gate command and scopes |
 | A4 | PR title check | `.github/workflows/pr-title.yml` | calls the reusable `pr-title.yml` with the repo's scopes |
@@ -45,7 +40,7 @@ reformat-only commit exists.
 | # | What | Where |
 |---|---|---|
 | B1 | Bun as runtime, package manager and test runner (`bun.lock`, `bun test`) | `package.json` |
-| B2 | One gate: `bun run check` = typecheck + lint + format:check + knip + reuse + test | `package.json` scripts |
+| B2 | One gate: `bun run check` = typecheck + lint + format:check + knip + test | `package.json` scripts |
 | B3 | oxlint, `correctness` and `suspicious` as errors; every disabled rule has a comment saying why | `.oxlintrc.json` |
 | B4 | Prettier: 80 columns, double quotes, trailing commas, `arrowParens: always` | `.prettierrc.json` |
 | B5 | knip for unused files, exports and dependencies | `knip.ts` |
@@ -102,7 +97,6 @@ caller snippet.
 
 | Workflow | Caller trigger | Inputs |
 |---|---|---|
-| `reuse.yml` | `push` / `pull_request` on main | none |
 | `pr-title.yml` | `pull_request` (`opened`, `edited`, `synchronize`, `reopened`) | `scopes` (one per line, empty = any), `require-scope` (default `true`) |
 | `pr-size.yml` | `pull_request_target` (`opened`, `synchronize`, `reopened`, `ready_for_review`) | `exclude` (extra path regexes) |
 | `pr-deploy.yml` | `issue_comment` (`created`) | `preview-workflow` (default `pr-preview.yml`) |
@@ -124,10 +118,6 @@ after a week's cooldown. Use the repo's package ecosystem (`bun`, `npm`,
 `gomod`, …) in the first block, or drop it if the repo has no packages.
 
 ```yaml
-# SPDX-FileCopyrightText: 2026 Slopworks
-#
-# SPDX-License-Identifier: AGPL-3.0-or-later
-
 version: 2
 
 updates:
@@ -163,7 +153,7 @@ Every active repository merges the same way. Run
 whenever its CI check names change). It is idempotent:
 
 ```bash
-scripts/repo-settings.sh <repo> "<CI gate check name>" "<REUSE check name>"
+scripts/repo-settings.sh <repo> "<CI gate check name>"
 ```
 
 It sets:
@@ -176,6 +166,6 @@ It sets:
   up-to-date branch. Repository admins can bypass it.
 
 Required checks are the job names as GitHub reports them on a PR (for example
-`check / Type check & tests` and `reuse / REUSE lint` in any_talker). When a repo
+`check / Type check & tests` in any_talker). When a repo
 switches to the reusable workflows, its check names change, so rerun the script
 with the new names.

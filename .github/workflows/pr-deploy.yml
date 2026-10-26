@@ -1,7 +1,3 @@
-# SPDX-FileCopyrightText: 2026 Slopworks
-#
-# SPDX-License-Identifier: AGPL-3.0-or-later
-
 # Reusable: on a `/deploy` comment, start the repo's preview build for the PR.
 #
 # This half runs on `issue_comment`, which carries a write token, so it never

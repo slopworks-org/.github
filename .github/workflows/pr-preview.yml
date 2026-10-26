@@ -1,7 +1,3 @@
-# SPDX-FileCopyrightText: 2026 Slopworks
-#
-# SPDX-License-Identifier: AGPL-3.0-or-later
-
 # Reusable: build the dispatched branch and publish it as the `:preview` image,
 # then say so on its pull request.
 #

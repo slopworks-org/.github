@@ -13,27 +13,12 @@ precedence over this one.
 - Keep pull requests focused; add tests for new behavior; make sure the
   project's test command passes.
 
-## License & REUSE compliance
+## License
 
-Every Slopworks project is licensed under **AGPL-3.0-or-later** and is
-[REUSE](https://reuse.software/)-compliant. By submitting a contribution you
-agree that it is licensed under **AGPL-3.0-or-later**.
-
-Every file must carry copyright and license information — either an inline SPDX
-header (for source code and YAML) or an entry in the project's `REUSE.toml` (for
-JSON, binaries, and docs that can't hold a comment). The inline header is two
-lines, using the file language's comment syntax:
-
-```text
-SPDX-FileCopyrightText: 2026 Slopworks
-SPDX-License-Identifier: AGPL-3.0-or-later
-```
-
-Verify before opening a pull request — CI enforces this on every push:
-
-```bash
-reuse lint          # must report "compliant"
-```
+Every Slopworks project is licensed under **AGPL-3.0-or-later**, as stated in
+its root `LICENSE` file. By submitting a contribution you agree that it is
+licensed under **AGPL-3.0-or-later**. Files need no copyright or license
+header of their own.
 
 ## Code of Conduct
 
