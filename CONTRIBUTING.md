@@ -1,7 +1,7 @@
 # Contributing
 
 These are the default contribution guidelines for
-[Slopworks Co.](https://github.com/slopworks-org)
+[Slopworks](https://github.com/slopworks-org)
 repositories. Individual projects may ship their own `CONTRIBUTING.md` with
 stack-specific setup and test commands — when they do, that file takes
 precedence over this one.
@@ -25,7 +25,7 @@ JSON, binaries, and docs that can't hold a comment). The inline header is two
 lines, using the file language's comment syntax:
 
 ```text
-SPDX-FileCopyrightText: 2026 Slopworks Co.
+SPDX-FileCopyrightText: 2026 Slopworks
 SPDX-License-Identifier: AGPL-3.0-or-later
 ```
 

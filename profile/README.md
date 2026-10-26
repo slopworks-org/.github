@@ -1,9 +1,9 @@
 <!--
-SPDX-FileCopyrightText: 2026 Slopworks Co.
+SPDX-FileCopyrightText: 2026 Slopworks
 SPDX-License-Identifier: AGPL-3.0-or-later
 -->
 
-# Slopworks Co.
+# Slopworks
 
 Small, focused tools and experiments.
 

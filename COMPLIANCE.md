@@ -1,11 +1,11 @@
 <!--
-SPDX-FileCopyrightText: 2026 Slopworks Co.
+SPDX-FileCopyrightText: 2026 Slopworks
 SPDX-License-Identifier: AGPL-3.0-or-later
 -->
 
 # Compliance standard
 
-How every Slopworks Co. repository handles **licensing**, **REUSE**, and
+How every Slopworks repository handles **licensing**, **REUSE**, and
 **governance** — what each repo must contain, where each piece lives, and how to
 add or migrate a project. This is the single reference for licensing. The
 machinery that ships the standard lives in one repo:
@@ -26,7 +26,7 @@ Every project repository must:
 2. Be **[REUSE](https://reuse.software/) 3.x compliant** — `reuse lint` passes,
    enforced by CI on every push and pull request.
 3. Carry the canonical license text and a `REUSE.toml`, copyright
-   **`<year> Slopworks Co.`**.
+   **`<year> Slopworks`**.
 4. **Not** ship its own Code of Conduct / Security policy / Contributing guide —
    those are inherited from this `.github` repo, as are the PR and issue
    templates (a repo may keep its own issue templates when they ask for
@@ -47,7 +47,7 @@ license and copyright but are still REUSE compliant — see
 | License text | `LICENSE` (root) **and** `LICENSES/AGPL-3.0-or-later.txt` | `LICENSE` is the output of `reuse download AGPL-3.0-or-later` (official SPDX text); `LICENSES/AGPL-3.0-or-later.txt` is a symlink to `../LICENSE` |
 | License declared (machine) | `package.json` `"license"` / `Cargo.toml` `license` | `AGPL-3.0-or-later` |
 | License declared (prose) | `README.md` → `## License` section | `AGPL-3.0-or-later. See [LICENSE](LICENSE).` |
-| REUSE config | `REUSE.toml` | `**` wildcard, holder `<year> Slopworks Co.`, `AGPL-3.0-or-later` |
+| REUSE config | `REUSE.toml` | `**` wildcard, holder `<year> Slopworks`, `AGPL-3.0-or-later` |
 | REUSE CI | `.github/workflows/reuse.yml` | calls this repo's reusable `reuse.yml` |
 | Dependabot | `.github/dependabot.yml` | see [STANDARD.md → Dependabot](STANDARD.md#dependabot) |
 | Code of Conduct | *(none — inherited)* | this repo's `CODE_OF_CONDUCT.md` |
@@ -69,14 +69,14 @@ version = 1
 [[annotations]]
 path = "**"
 precedence = "closest"
-SPDX-FileCopyrightText = "2026 Slopworks Co."
+SPDX-FileCopyrightText = "2026 Slopworks"
 SPDX-License-Identifier = "AGPL-3.0-or-later"
 ```
 
 `.github/workflows/reuse.yml`:
 
 ```yaml
-# SPDX-FileCopyrightText: 2026 Slopworks Co.
+# SPDX-FileCopyrightText: 2026 Slopworks
 #
 # SPDX-License-Identifier: AGPL-3.0-or-later
 
@@ -99,7 +99,7 @@ Inline SPDX header for source files (optional but encouraged; use the file's
 comment syntax, e.g. `//`, `#`, `--`):
 
 ```text
-SPDX-FileCopyrightText: 2026 Slopworks Co.
+SPDX-FileCopyrightText: 2026 Slopworks
 SPDX-License-Identifier: AGPL-3.0-or-later
 ```
 
