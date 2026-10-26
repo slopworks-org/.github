@@ -2,8 +2,7 @@
 
 What every active Slopworks repository has. To bring a repo up to it, go
 through the checklists on a branch, add what is missing, and open a PR.
-[`any_talker`](https://github.com/slopworks-org/any_talker) is the reference:
-when it and this page disagree, update this page. Archived repos are out of scope.
+Archived repos are out of scope.
 
 ## 1. Every repository
 
@@ -45,8 +44,6 @@ Exceptions:
 | B6 | lefthook pre-commit runs the gate, never rewrites files | `lefthook.yml` |
 | B7 | Strict TS: `strict`, `noUncheckedIndexedAccess`, `exactOptionalPropertyTypes`, `noUnusedLocals`, `noUnusedParameters`, `noImplicitReturns`, `noImplicitOverride`, `verbatimModuleSyntax` | `tsconfig.json` |
 | B8 | `"license": "AGPL-3.0-or-later"` | `package.json` |
-
-Copy the configs from any_talker and trim what does not apply.
 
 Other stacks take the equivalent of B2–B7:
 
@@ -132,4 +129,4 @@ It makes every repo merge the same way:
   resolved threads and green required checks (admins can bypass).
 
 A check name is the job name as a PR shows it, e.g.
-`check / Type check & tests` in any_talker.
+`check / Type check & tests`.
