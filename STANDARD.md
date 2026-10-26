@@ -55,8 +55,7 @@ Other stacks take the equivalent of B2–B7:
 | # | What | Where |
 |---|---|---|
 | C1 | Push to main runs the gate, then publishes the image to GHCR (`latest` + SHA tags) | `Dockerfile`, `.github/workflows/release.yml` |
-| C2 | `/deploy` comment on a PR publishes a `:preview` image | `pr-deploy.yml` + `pr-preview.yml`, snippets at the top of [`pr-deploy.yml`](.github/workflows/pr-deploy.yml) and [`pr-preview.yml`](.github/workflows/pr-preview.yml) |
-| C3 | Example config and local run | `.env.example`, `docker-compose.yml` |
+| C2 | Example config and local run | `.env.example`, `docker-compose.yml` |
 
 ## 4. Definition of done
 

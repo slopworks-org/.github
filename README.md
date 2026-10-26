@@ -21,8 +21,8 @@ Each file starts with the snippet a repo pastes to call it.
 |---|---|---|
 | [`pr-title.yml`](.github/workflows/pr-title.yml) | Fails a PR whose title is not a conventional commit, or that carries AI attribution | every repo |
 | [`pr-size.yml`](.github/workflows/pr-size.yml) | Labels a PR `size:XS`…`size:XXL` and asks to split it past 300 lines | every repo |
-| [`pr-deploy.yml`](.github/workflows/pr-deploy.yml) | On a `/deploy` comment, starts the repo's `pr-preview.yml` | services |
-| [`pr-preview.yml`](.github/workflows/pr-preview.yml) | Builds the PR branch and publishes it as the `:preview` image | services |
+| [`pr-deploy.yml`](.github/workflows/pr-deploy.yml) | On a `/deploy` comment, starts the repo's `pr-preview.yml` | any_talker, xfleet |
+| [`pr-preview.yml`](.github/workflows/pr-preview.yml) | Builds the PR branch and publishes it as the `:preview` image | any_talker, xfleet |
 
 ## How a change lands in any repo
 
