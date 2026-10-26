@@ -8,7 +8,7 @@ Archived repos are out of scope.
 
 | # | What | Where |
 |---|---|---|
-| A1 | License: AGPL-3.0-or-later, never bare `AGPL-3.0` or `-only` | `LICENSE` at the root, nothing else (no `LICENSES/`, `REUSE.toml` or per-file headers) |
+| A1 | License: AGPL-3.0-or-later, never bare `AGPL-3.0` or `-only` | `LICENSE` at the root |
 | A2 | Agent instructions: commands, layout, conventions | `CLAUDE.md`, with `AGENTS.md` a symlink to it |
 | A3 | Definition of done, [copied from below](#4-definition-of-done) | `CLAUDE.md` |
 | A4 | PR title check, with the repo's scopes | `.github/workflows/pr-title.yml` |
