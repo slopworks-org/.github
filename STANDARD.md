@@ -47,6 +47,7 @@ Paste into `CLAUDE.md`, replacing `bun run check` with the repo's gate.
 
 - **Everything in the repo is written in English** — code, comments, docs, commit messages, issues and PRs (title and body), whatever language the task was discussed in. The only exception is localization: translations into other languages.
 - **Never commit to main.** Every task starts on a fresh branch off `origin/main`, named `<type>/<short-task>` — `fix/`, `feat/`, `refactor/`, `chore/`.
+- **Repo not on GitHub yet** (no `origin` remote): the project is in very active development. Work straight on `main`, but still split the work into small commits, one per logical change, with conventional-commit messages and no AI attribution. The branch, PR and merge rules below start once the repo is on GitHub.
 - **One task = one branch = one PR.** Past ~300 changed lines, split it into several PRs. `size:XL` or `size:XXL` means split the PR, not "explain why it is large".
 - **PR title is the squash commit subject:** conventional commit with a scope, enforced by `.github/workflows/pr-title.yml`.
   - Type: `feat` `fix` `refactor` `chore` `docs` `test` `ci` `perf` `revert`.

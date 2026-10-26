@@ -30,6 +30,9 @@ Every repo calls both. Each file starts with the snippet a repo pastes to call i
 2. Checks run: `pr-title`, `pr-size` and the repo's own CI gate.
 3. Squash merge on GitHub. The PR title and body become the commit on `main`.
 
+A repo that is not on GitHub yet is in very active development: commit
+straight to `main`, still one commit per logical change.
+
 ## License
 
 AGPL-3.0-or-later. See [LICENSE](LICENSE).
