@@ -1,13 +1,13 @@
 # Compliance standard
 
-How every Slopworks repository handles **licensing** and **governance** — what
-each repo must contain, where each piece lives, and how to add or migrate a
+How every Slopworks repository handles **licensing** — what each repo
+must contain, where each piece lives, and how to add or migrate a
 project. This is the single reference for licensing. The machinery that ships
 the standard lives in one repo:
 
 - [`.github`](https://github.com/slopworks-org/.github) (this repo): the
-  org-wide governance defaults, PR and issue templates and reusable workflows,
-  inherited or called by every repo.
+  org-wide PR and issue templates and reusable workflows, inherited or called
+  by every repo.
 
 Everything beyond licensing (CI, PR rules, tooling, Definition of done) is in
 [STANDARD.md](STANDARD.md).
@@ -21,10 +21,10 @@ Every project repository must:
 2. Carry the license text in a single root `LICENSE` file, and nothing else:
    no `LICENSES/` directory, no `REUSE.toml`, no per-file SPDX or copyright
    headers.
-3. **Not** ship its own Code of Conduct / Security policy / Contributing guide —
-   those are inherited from this `.github` repo, as are the PR and issue
-   templates (a repo may keep its own issue templates when they ask for
-   project-specific details; see [STANDARD.md](STANDARD.md) A6).
+3. **Not** ship its own Code of Conduct, Security policy or Contributing guide.
+   The PR and issue templates are inherited from this `.github` repo (a repo
+   may keep its own issue templates when they ask for project-specific
+   details; see [STANDARD.md](STANDARD.md) A6).
 4. Keep dependencies and CI actions current via **Dependabot**, configured as in
    [STANDARD.md → Dependabot](STANDARD.md#dependabot).
 
@@ -41,22 +41,17 @@ exception to point 1: they keep their upstream license — see
 | License declared (machine) | `package.json` `"license"` / `Cargo.toml` `license` | `AGPL-3.0-or-later` |
 | License declared (prose) | `README.md` → `## License` section | `AGPL-3.0-or-later. See [LICENSE](LICENSE).` |
 | Dependabot | `.github/dependabot.yml` | see [STANDARD.md → Dependabot](STANDARD.md#dependabot) |
-| Code of Conduct | *(none — inherited)* | this repo's `CODE_OF_CONDUCT.md` |
-| Security policy | *(none — inherited)* | this repo's `SECURITY.md` (contact `security@slopworks.org`) |
-| Contributing guide | *(none — inherited)* | this repo's `CONTRIBUTING.md` |
 | PR / issue templates | *(none — inherited; own issue templates allowed)* | this repo's `.github/pull_request_template.md` and `.github/ISSUE_TEMPLATE/` |
 
 Rule of thumb: to change a **license** detail, edit the repo. To change a
-**governance** doc, edit it **here** once and every repo follows.
+template or a reusable workflow, edit it **here** once and every repo follows.
 
 ## Adding a new project
 
 There is no template repository. Create an empty repo, then bring it to the
-standard exactly like an existing one: run the `slopworks-standardize` Claude
-skill on a branch (or follow
+standard exactly like an existing one: follow
 [Migrating an existing project](#migrating-an-existing-project) plus the
-[STANDARD.md](STANDARD.md) checklist by hand) and open a PR. Governance docs are
-inherited automatically, so **don't add your own**.
+[STANDARD.md](STANDARD.md) checklist on a branch and open a PR.
 
 ## Migrating an existing project
 
@@ -84,8 +79,7 @@ variant). Work on a branch and open a PR.
 6. **Declare the license** as `AGPL-3.0-or-later` in the manifest
    (`package.json` / `Cargo.toml`) and the README `## License` section. Replace any
    bare `AGPL-3.0` or `AGPL-3.0-only`.
-7. **Remove** any own `CODE_OF_CONDUCT.md` / `SECURITY.md` / `CONTRIBUTING.md` —
-   they're inherited from this repo now.
+7. **Remove** any own `CODE_OF_CONDUCT.md` / `SECURITY.md` / `CONTRIBUTING.md`.
 8. **Open a PR**, let CI confirm, merge.
 
 ## Third-party code
@@ -114,15 +108,13 @@ The upstream `LICENSE` file stays as it is. The rest of the standard
 - The license must be the explicit **`-or-later`** grant. Per AGPLv3 §14, bare
   `AGPL-3.0` binds to version 3 only; the "or any later version" line inside the
   LICENSE body is FSF template text, not a grant the project made.
-- Our Code of Conduct is an **original** policy under AGPL — not the Contributor
-  Covenant — so repos stay single-license (no CC-BY-4.0).
 - Don't rewrite historical `CHANGELOG` entries to match renamed files; they record
   what actually happened.
 
 ## What is *not* automatic
 
-- **Governance** reaches every repo — even a blank one — through this repo's
-  defaults.
+- **PR and issue templates** reach every repo — even a blank one — through this
+  repo's defaults.
 - **Licensing / CI / Dependabot** reach a repo **only once it is brought to the
   standard** with the steps above; a new repo starts empty. Once there, changes
   to the reusable workflows here reach it automatically.
