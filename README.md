@@ -1,26 +1,15 @@
 # .github
 
-Organization-wide defaults for [Slopworks](https://github.com/slopworks-org).
-
-GitHub automatically applies the community-health files in this repository to
-**every** repository in the organization that does not provide its own:
-
-- [`CODE_OF_CONDUCT.md`](CODE_OF_CONDUCT.md) — original, project-owned policy
-- [`CONTRIBUTING.md`](CONTRIBUTING.md) — default contribution guidelines
-- [`SECURITY.md`](SECURITY.md) — vulnerability disclosure policy
+Organization-wide defaults for [Slopworks](https://github.com/slopworks-org):
+the PR and issue templates GitHub applies to every repository that does not
+provide its own, and the reusable workflows the repositories call.
 
 [`profile/README.md`](profile/README.md) is the public profile page shown on the
 organization's landing page.
 
-The full org **compliance standard** — licensing and how to add or
-migrate repositories — is documented in [`COMPLIANCE.md`](COMPLIANCE.md).
-
-> **Note:** these defaults only fill in what a repository is *missing*. A repo
-> with its own `CODE_OF_CONDUCT.md` / `CONTRIBUTING.md` / `SECURITY.md` overrides
-> the default. They are surfaced in each repo's *Community Standards* view but
-> are **not** copied into the repo — so they do not affect that repo's
-> license. For licensing and the rest of the engineering
-> standard, see [`COMPLIANCE.md`](COMPLIANCE.md) and [`STANDARD.md`](STANDARD.md).
+Licensing and how to add or migrate repositories are documented in
+[`COMPLIANCE.md`](COMPLIANCE.md); the rest of the engineering standard is in
+[`STANDARD.md`](STANDARD.md).
 
 ## License
 

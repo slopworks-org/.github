@@ -7,9 +7,8 @@ when this page and any_talker disagree, any_talker is the newer one and this pag
 should be updated.
 
 There is no template repository to start from. A new repo and an old one are
-brought to the standard the same way: run the `slopworks-standardize` Claude
-skill (or follow the checklist below by hand) on a branch and open a PR. It adds
-what is missing and leaves what is already there.
+brought to the standard the same way: follow the checklist below on a branch
+and open a PR, adding what is missing and leaving what is already there.
 
 Archived repositories are out of scope.
 
