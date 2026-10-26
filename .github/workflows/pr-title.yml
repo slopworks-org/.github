@@ -1,7 +1,3 @@
-# SPDX-FileCopyrightText: 2026 Slopworks
-#
-# SPDX-License-Identifier: AGPL-3.0-or-later
-
 # Reusable: conventional-commit PR titles and no AI attribution in the PR.
 #
 # main only ever gains squashed pull requests, and GitHub uses the PR title as

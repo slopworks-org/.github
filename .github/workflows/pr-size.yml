@@ -1,7 +1,3 @@
-# SPDX-FileCopyrightText: 2026 Slopworks
-#
-# SPDX-License-Identifier: AGPL-3.0-or-later
-
 # Reusable: label every PR `size:XS`…`size:XXL` by effective lines changed
 # (additions + deletions, minus tests, lockfiles and generated files), and
 # leave one reminder comment on `size:XL` and above.

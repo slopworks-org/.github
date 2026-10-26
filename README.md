@@ -1,8 +1,3 @@
-<!--
-SPDX-FileCopyrightText: 2026 Slopworks
-SPDX-License-Identifier: AGPL-3.0-or-later
--->
-
 # .github
 
 Organization-wide defaults for [Slopworks](https://github.com/slopworks-org).
@@ -17,17 +12,16 @@ GitHub automatically applies the community-health files in this repository to
 [`profile/README.md`](profile/README.md) is the public profile page shown on the
 organization's landing page.
 
-The full org **compliance standard** — licensing, REUSE, and how to add or
+The full org **compliance standard** — licensing and how to add or
 migrate repositories — is documented in [`COMPLIANCE.md`](COMPLIANCE.md).
 
 > **Note:** these defaults only fill in what a repository is *missing*. A repo
 > with its own `CODE_OF_CONDUCT.md` / `CONTRIBUTING.md` / `SECURITY.md` overrides
 > the default. They are surfaced in each repo's *Community Standards* view but
-> are **not** copied into the repo — so they do not affect that repo's REUSE
-> compliance or its license. For licensing/REUSE and the rest of the engineering
+> are **not** copied into the repo — so they do not affect that repo's
+> license. For licensing and the rest of the engineering
 > standard, see [`COMPLIANCE.md`](COMPLIANCE.md) and [`STANDARD.md`](STANDARD.md).
 
 ## License
 
-Licensed under [AGPL-3.0-or-later](LICENSE); this repository is itself
-[REUSE](https://reuse.software/)-compliant.
+AGPL-3.0-or-later. See [LICENSE](LICENSE).
