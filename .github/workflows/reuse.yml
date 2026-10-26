@@ -1,4 +1,4 @@
-# SPDX-FileCopyrightText: 2026 The Fisher Slopworks Co
+# SPDX-FileCopyrightText: 2026 Slopworks
 #
 # SPDX-License-Identifier: AGPL-3.0-or-later
 
@@ -15,7 +15,7 @@
 #     contents: read
 #   jobs:
 #     reuse:
-#       uses: The-Fisher-Slopworks-Co/.github/.github/workflows/reuse.yml@main
+#       uses: slopworks-org/.github/.github/workflows/reuse.yml@main
 name: REUSE Compliance
 
 on:

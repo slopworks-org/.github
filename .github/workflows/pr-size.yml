@@ -1,4 +1,4 @@
-# SPDX-FileCopyrightText: 2026 The Fisher Slopworks Co
+# SPDX-FileCopyrightText: 2026 Slopworks
 #
 # SPDX-License-Identifier: AGPL-3.0-or-later
 
@@ -21,7 +21,7 @@
 #     issues: write
 #   jobs:
 #     pr-size:
-#       uses: The-Fisher-Slopworks-Co/.github/.github/workflows/pr-size.yml@main
+#       uses: slopworks-org/.github/.github/workflows/pr-size.yml@main
 #
 # `pull_request_target` gives the token write access on PRs from forks too;
 # this job never checks out or runs PR code, so that is safe.

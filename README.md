@@ -1,11 +1,11 @@
 <!--
-SPDX-FileCopyrightText: 2026 The Fisher Slopworks Co
+SPDX-FileCopyrightText: 2026 Slopworks
 SPDX-License-Identifier: AGPL-3.0-or-later
 -->
 
 # .github
 
-Organization-wide defaults for [The Fisher Slopworks Co](https://github.com/The-Fisher-Slopworks-Co).
+Organization-wide defaults for [Slopworks](https://github.com/slopworks-org).
 
 GitHub automatically applies the community-health files in this repository to
 **every** repository in the organization that does not provide its own:

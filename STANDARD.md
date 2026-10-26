@@ -1,13 +1,13 @@
 <!--
-SPDX-FileCopyrightText: 2026 The Fisher Slopworks Co
+SPDX-FileCopyrightText: 2026 Slopworks
 SPDX-License-Identifier: AGPL-3.0-or-later
 -->
 
 # Engineering standard
 
-What every active The Fisher Slopworks Co repository carries beyond licensing.
+What every active Slopworks repository carries beyond licensing.
 Licensing and REUSE are in [COMPLIANCE.md](COMPLIANCE.md). The reference
-implementation is [`any_talker`](https://github.com/The-Fisher-Slopworks-Co/any_talker):
+implementation is [`any_talker`](https://github.com/slopworks-org/any_talker):
 when this page and any_talker disagree, any_talker is the newer one and this page
 should be updated.
 
@@ -124,7 +124,7 @@ after a week's cooldown. Use the repo's package ecosystem (`bun`, `npm`,
 `gomod`, …) in the first block, or drop it if the repo has no packages.
 
 ```yaml
-# SPDX-FileCopyrightText: 2026 The Fisher Slopworks Co
+# SPDX-FileCopyrightText: 2026 Slopworks
 #
 # SPDX-License-Identifier: AGPL-3.0-or-later
 

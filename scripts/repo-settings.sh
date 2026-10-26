@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# SPDX-FileCopyrightText: 2026 The Fisher Slopworks Co
+# SPDX-FileCopyrightText: 2026 Slopworks
 #
 # SPDX-License-Identifier: AGPL-3.0-or-later
 
@@ -22,7 +22,7 @@
 # admin, and `jq`.
 set -euo pipefail
 
-ORG=The-Fisher-Slopworks-Co
+ORG=slopworks-org
 GITHUB_ACTIONS_APP_ID=15368
 
 if [[ $# -lt 1 ]]; then
