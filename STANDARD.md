@@ -17,9 +17,8 @@ Archived repos are out of scope.
 | A7 | Dependabot, [snippet below](#5-dependabot) | `.github/dependabot.yml` |
 | A8 | Code owner: `* @txssu` | `.github/CODEOWNERS` |
 | A9 | Third-party actions pinned by SHA with a `# vX.Y.Z` comment (`actions/*`, `github/*` and official setup actions are exempt) | all workflows |
-| A10 | Claude Code plugins: `claude-md-management`, `commit-commands`, the stack's LSP | `.claude/settings.json` |
-| A11 | Merge settings and ruleset, [see below](#6-merge-settings) | GitHub settings |
-| A12 | Everything in English, except translations | whole repo |
+| A10 | Merge settings and ruleset, [see below](#6-merge-settings) | GitHub settings |
+| A11 | Everything in English, except translations | whole repo |
 
 A4 and A5 call this repo's reusable workflows: copy the snippet from the top
 of [`pr-title.yml`](.github/workflows/pr-title.yml) and
