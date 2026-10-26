@@ -10,14 +10,14 @@ Archived repos are out of scope.
 |---|---|---|
 | A1 | License: AGPL-3.0-or-later, never bare `AGPL-3.0` or `-only` | `LICENSE` at the root |
 | A2 | Agent instructions: commands, layout, conventions | `CLAUDE.md`, with `AGENTS.md` a symlink to it |
-| A3 | Definition of done, [copied from below](#4-definition-of-done) | `CLAUDE.md` |
+| A3 | Definition of done, [copied from below](#3-definition-of-done) | `CLAUDE.md` |
 | A4 | PR title check, with the repo's scopes | `.github/workflows/pr-title.yml` |
 | A5 | PR size labels | `.github/workflows/pr-size.yml` |
-| A6 | CI gate: runs the whole check on PRs to main | `.github/workflows/ci.yml` |
-| A7 | Dependabot, [snippet below](#5-dependabot) | `.github/dependabot.yml` |
+| A6 | One check command, run by CI on PRs to main and by the pre-commit hook. Per-stack setup in [`stacks/`](stacks) | `.github/workflows/ci.yml` |
+| A7 | Dependabot, [snippet below](#4-dependabot) | `.github/dependabot.yml` |
 | A8 | Code owner: `* @txssu` | `.github/CODEOWNERS` |
 | A9 | Third-party actions pinned by SHA with a `# vX.Y.Z` comment (`actions/*`, `github/*` and official setup actions are exempt) | all workflows |
-| A10 | Merge settings and ruleset, [see below](#6-merge-settings) | GitHub settings |
+| A10 | Merge settings and ruleset, [see below](#5-merge-settings) | GitHub settings |
 | A11 | Everything in English, except translations | whole repo |
 
 A4 and A5 call this repo's reusable workflows: copy the snippet from the top
@@ -31,33 +31,14 @@ Exceptions:
 - **Forks** of outside projects (e.g. `cli`) keep the upstream `LICENSE`.
 - **Copied third-party files** keep their original license notice at the top.
 
-## 2. TypeScript / Bun
-
-| # | What | Where |
-|---|---|---|
-| B1 | Bun as runtime, package manager and test runner | `package.json`, `bun.lock` |
-| B2 | One gate, `bun run check`: typecheck + lint + format:check + knip + test | `package.json` scripts |
-| B3 | oxlint: `correctness` and `suspicious` are errors, every disabled rule says why | `.oxlintrc.json` |
-| B4 | Prettier: 80 columns, double quotes, trailing commas, `arrowParens: always` | `.prettierrc.json` |
-| B5 | knip: unused files, exports and dependencies | `knip.ts` |
-| B6 | lefthook pre-commit runs the gate, never rewrites files | `lefthook.yml` |
-| B7 | Strict TS: `strict`, `noUncheckedIndexedAccess`, `exactOptionalPropertyTypes`, `noUnusedLocals`, `noUnusedParameters`, `noImplicitReturns`, `noImplicitOverride`, `verbatimModuleSyntax` | `tsconfig.json` |
-| B8 | `"license": "AGPL-3.0-or-later"` | `package.json` |
-
-Other stacks take the equivalent of B2–B7:
-
-- **VS Code extensions:** npm instead of Bun, and `isolatedModules` instead of
-  `verbatimModuleSyntax` (it breaks CommonJS), with a comment saying so.
-- **Go:** golangci-lint and `go test`.
-
-## 3. Deployed services
+## 2. Deployed services
 
 | # | What | Where |
 |---|---|---|
 | C1 | Push to main runs the gate, then publishes the image to GHCR (`latest` + SHA tags) | `Dockerfile`, `.github/workflows/release.yml` |
 | C2 | Example config and local run | `.env.example`, `docker-compose.yml` |
 
-## 4. Definition of done
+## 3. Definition of done
 
 Paste into `CLAUDE.md`, replacing `bun run check` with the repo's gate.
 
@@ -77,7 +58,7 @@ Paste into `CLAUDE.md`, replacing `bun run check` with the repo's gate.
 - **Never merge locally.** Merging happens on GitHub, squash only.
 ```
 
-## 5. Dependabot
+## 4. Dependabot
 
 Security updates for packages, weekly updates for actions after a 7-day
 cooldown. Swap `bun` for the repo's ecosystem, or drop that block.
@@ -111,7 +92,7 @@ updates:
         update-types: [minor, patch]
 ```
 
-## 6. Merge settings
+## 5. Merge settings
 
 Run once per repo, and again when its check names change:
 
