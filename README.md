@@ -17,7 +17,7 @@ in this repo, at a glance:
 
 ## Workflows
 
-Every repo calls both. Each file starts with the snippet a repo pastes to call it.
+Every repo calls both.
 
 | Workflow | What it does |
 |---|---|
@@ -32,7 +32,3 @@ Every repo calls both. Each file starts with the snippet a repo pastes to call i
 
 A repo that is not on GitHub yet is in very active development: commit
 straight to `main`, still one commit per logical change.
-
-## License
-
-AGPL-3.0-or-later. See [LICENSE](LICENSE).
