@@ -1,7 +1,5 @@
 # TypeScript
 
-On top of [STANDARD.md](../STANDARD.md), for TypeScript repos.
-
 | # | What | Where |
 |---|---|---|
 | T1 | Bun as runtime, package manager and test runner | `package.json`, `bun.lock` |

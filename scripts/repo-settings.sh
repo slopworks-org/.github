@@ -1,17 +1,10 @@
 #!/usr/bin/env bash
-# Apply the org's pull request settings to one repository, idempotently.
+# Apply the org's merge settings and "main" ruleset to one repository,
+# idempotently. What it sets: STANDARD.md → 4. Merge settings.
 #
 #   scripts/repo-settings.sh <repo> [required check name]...
 #
 #   scripts/repo-settings.sh any_talker "check / Type check & tests"
-#
-# What it sets (see STANDARD.md → Pull request settings):
-#   - merge: squash only, commit title = PR title, body = PR body,
-#     head branch deleted after merge, auto-merge off;
-#   - ruleset "main" on the default branch: no deletion, no force-push,
-#     changes only through a squash-merged PR with all review threads
-#     resolved, and the given status checks green on an up-to-date branch.
-#     Repository admins can bypass it.
 #
 # With no check names, the checks already required by the existing "main"
 # ruleset are kept (none on a first run). Needs `gh` signed in as an org
@@ -22,7 +15,7 @@ ORG=slopworks-org
 GITHUB_ACTIONS_APP_ID=15368
 
 if [[ $# -lt 1 ]]; then
-  sed -n '2,18p' "$0" | sed 's/^# \{0,1\}//'
+  sed -n '2,11p' "$0" | sed 's/^# \{0,1\}//'
   exit 64
 fi
 
