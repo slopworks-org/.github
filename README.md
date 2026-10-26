@@ -24,6 +24,8 @@ Every repo calls both. Each file starts with the snippet a repo pastes to call i
 | [`pr-title.yml`](.github/workflows/pr-title.yml) | Fails a PR whose title is not a conventional commit, or that carries AI attribution |
 | [`pr-size.yml`](.github/workflows/pr-size.yml) | Labels a PR `size:XS`…`size:XXL` and asks to split it past 300 lines |
 
+`self-pr-title.yml` and `self-pr-size.yml` run the two on this repo's own PRs.
+
 ## How a change lands in any repo
 
 1. Branch off `main`, open a PR. The template fills in the description.
